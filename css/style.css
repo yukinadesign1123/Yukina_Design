@@ -1,1 +1,365 @@
 @charset "utf-8";
+
+body {
+    /* background: #E9D9C0; */
+    max-width: 1440px;
+}
+
+section {
+    padding: 120px 0;
+}
+
+header {
+    position: relative;
+}
+
+.header_slider img {
+    width: 100%;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 5% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    h1 img {
+        width: 200px;
+        vertical-align: baseline;
+    }
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.pc_nav ul li {
+    color: #00416A;
+    font-family: "futura-pt", sans-serif;
+}
+
+/* スマホ版メニュー */
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    .sp_btn {
+        display: block;
+        height: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 34px;
+        right: 27px;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 24px;
+        height: 1px;
+        border-radius: 1px;
+        background: #00416A;
+        position: relative;
+        top: 8.5px;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        border-radius: 1px;
+        background: #00416A;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 8.5px;
+    }
+
+    .sp_btn span::after {
+        top: 8.5px
+    }
+
+    /* ばつ印 */
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューの見た目 */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+    }
+
+    .sp_nav li {
+        color: #fff;
+        font-size: 32px;
+        font-family: "the-seasons", sans-serif;
+    }
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.animate-text {
+    display: flex;
+    /* 文字を横並びにする */
+    overflow: hidden;
+    /* 枠外から出てくるように見せる場合 */
+}
+
+/* 1文字ずつの設定 */
+.animate-text span {
+    display: inline-block;
+    opacity: 0;
+    /* 最初は透明 */
+    transform: translateY(20px);
+    /* 少し下に配置 */
+    animation: fadeInUp 0.5s forwards;
+    /* アニメーション実行 */
+}
+
+.animate-portfolio {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #fff;
+    /* デザインに合わせた色 */
+    opacity: 0;
+    /* 名前の表示が終わった後に動き出すようにディレイを長めにする */
+    animation: fadeInUp 1.0s ease-out 1.5s forwards;
+}
+
+/* アニメーションの中身 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* 元の位置に戻る */
+    }
+}
+
+/* 時間差（ディレイ）の設定 */
+.animate-text span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.animate-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate-text span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.animate-text span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.animate-text span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.animate-text span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.animate-text span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+/* スペース */
+.animate-text span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.animate-text span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.animate-text span:nth-child(10) {
+    animation-delay: 1.0s;
+}
+
+.animate-text span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
+.section_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.en {
+    font-family: "the-seasons";
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    line-height: 1;
+    text-align: center;
+}
+
+.ja {
+    font-family: "Yu Gothic";
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.CONCEPT_text {
+    text-align: center;
+    font-family: "Yu Gothic";
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 200%;
+    color: #00416A;
+}
+
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 56px;
+    padding: 0 10px 0 10px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.works-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.works-title {
+    margin-top: 24px;
+    font-family: "Yu Gothic";
+    font-weight: 400;
+    font-size: 20px;
+    color: #35424D;
+}
+
+.works-category {
+    font-size: 18px;
+    color: #90939B;
+    margin-top: 12px;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.btn-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* サイズと形状 */
+    width: 400px;
+    /* Figmaのサイズに合わせて調整 */
+    height: 75px;
+    border: 1px solid #00416A;
+    /* 枠線の色 */
+    border-radius: 38px;
+    /* 高さの半分を指定すると綺麗なカプセル型になります */
+
+    /* テキストのスタイル */
+    color: #00416A;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+
+    position: relative;
+    transition: all 0.3s;
+    /* ホバー時の動きを滑らかにする */
+}
+
+/* 矢印（CSSで描く） */
+.arrow {
+    position: absolute;
+    right: 40px;
+    /* 右からの位置 */
+    width: 40px;
+    /* 矢印の長さ */
+    height: 1px;
+    background-color: #00416A;
+}
+
+/* 矢印の先端の「く」の部分 */
+.arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #00416A;
+    border-right: 1px solid #00416A;
+    transform: rotate(45deg);
+    /* 45度回転させて先端にする */
+}
+
+/* ホバー時の演出（おまけ） */
+.btn-more:hover {
+    background-color: #00416A;
+    color: #fff;
+}
+
+.btn-more:hover .arrow,
+.btn-more:hover .arrow::after {
+    background-color: #fff;
+    border-color: #fff;
+}
