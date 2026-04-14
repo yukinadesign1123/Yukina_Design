@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-    /* background: #E9D9C0; */
+    background: #FDFEFF;
     max-width: 1440px;
 }
 
@@ -13,7 +13,11 @@ header {
     position: relative;
 }
 
-.header_slider img {
+.header_background {
+    position: relative;
+}
+
+.header_background img {
     width: 100%;
 }
 
@@ -27,6 +31,7 @@ header {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    font-family: "futura-pt";
 
     h1 img {
         width: 200px;
@@ -146,10 +151,12 @@ header {
 }
 
 .animate-text {
+    color: #00416A;
     display: flex;
     /* 文字を横並びにする */
     overflow: hidden;
     /* 枠外から出てくるように見せる場合 */
+    position: absolute;
 }
 
 /* 1文字ずつの設定 */
@@ -166,7 +173,7 @@ header {
 .animate-portfolio {
     margin-top: 10px;
     font-size: 24px;
-    color: #fff;
+    color: #00416A;
     /* デザインに合わせた色 */
     opacity: 0;
     /* 名前の表示が終わった後に動き出すようにディレイを長めにする */
@@ -362,4 +369,68 @@ header {
 .btn-more:hover .arrow::after {
     background-color: #fff;
     border-color: #fff;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    /* 上下の中央に揃える */
+    gap: 100px;
+    /* 画像とテキストの間の距離 */
+    max-width: 1080px;
+    /* コンテンツ全体の幅 */
+    margin: 0 auto;
+    /* 真ん中寄せ */
+}
+
+/* 左側の画像エリア */
+.about-image {
+    flex: 0 0 240px;
+    /* 幅を320pxで固定 */
+}
+
+.about-image img {
+    width: 100%;
+    /* 親の320pxに合わせて広げる */
+    height: auto;
+    /* border-radius: 160px 160px 0 0; アーチ型にする場合（数値は調整してね） */
+}
+
+/* 右側のテキストエリア */
+.about-text {
+    flex: 1;
+    /* 残りの幅をすべて使う */
+    text-align: left;
+}
+
+.profile-name h3 {
+    display: inline-block;
+    font-size: 28px;
+    margin-right: 32px;
+    font-family: "Yu Gothic";
+    font-weight: 400;
+    color: #35424D;
+}
+
+.name-en {
+    font-size: 20px;
+    font-family: "futura-pt";
+    font-weight: 400;
+    color: #35424D;
+}
+
+.profile-description {
+    margin-top: 32px;
+    line-height: 1.8;
+    /* 行間を広げて読みやすく */
+    font-size: 18px;
+    color: #35424D;
+}
+
+/* SNSと「詳しく見る」を横に並べる */
+.profile-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
 }
