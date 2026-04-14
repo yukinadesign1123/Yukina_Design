@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
     <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'iew1lhr',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
     <title>Yukina Design Portfolio</title>
 
@@ -132,14 +142,14 @@
             </div>
         </section>
 
-        <section>
+        <section id="about">
             <h2 class="section_title">
                 <span class="en">ABOUT</span>
                 <span class="ja">私のこと</span>
             </h2>
             <div class="about-flex">
                 <div class="about-image">
-                    <img src="./image/aboutme.png" alt="久保 有希奈">
+                    <img src="./image/aboutme.jpg" alt="久保 有希奈">
                 </div>
 
                 <div class="about-text">
@@ -153,16 +163,46 @@
                     </p>
 
                     <div class="profile-footer">
-                        <div class="sns-icons">
-                            <img src="./image/logo-black 1.svg" alt="X">
-                            <img src="./image/Instagram_Glyph_Black 1.svg" alt="Instagram">
+                        <div class="sns-links">
+                            <a href="#"> <img src="./image/logo-black 1.svg" alt="X"></a>
+                            <a href="#"><img src="./image/Instagram_Glyph_Black 1.svg" alt="Instagram"></a>
                         </div>
-                        <a href="#" class="more-link">詳しく見る <span class="arrow"></span></a>
+
+                        <a href="#">詳しく見る</a><span class="arrow"></span>
                     </div>
+
                 </div>
+            </div>
             </div>
 
         </section>
+
+        <footer>
+            <div class="footer">
+                <img src="./image/footer.jpg" alt="背景">
+                <h2 class="section_title">
+                    <span class="en">CONTACT</span>
+                </h2>
+                <p>制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。内容を確認後、折り返しご連絡いたします。</p>
+                <div class="btn-container">
+                    <a href="#" class="btn-more">
+                        制作について問い合わせる
+                        <span class="arrow"></span>
+                    </a>
+                    <div class="footer_wrap">
+                        <h1>
+                            <img src="./image/yukina_design_logo_header_2x.png" alt="Yukina Design">
+                        </h1>
+                        <nav class="pc_nav">
+                            <ul>
+                                <li><a href="#WORKS">WORKS</a></li>
+                                <li><a href="#ABOUT">ABOUT</a></li>
+                                <li><a href="#CONTACT">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+        </footer>
     </main>
 </body>
 
