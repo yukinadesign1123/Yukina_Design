@@ -32,10 +32,18 @@ header {
     width: 100%;
     box-sizing: border-box;
     font-family: futura-pt, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 
     h1 img {
-        width: 200px;
+        width: 250px;
         vertical-align: baseline;
+        display: inline-block;
+        /* リンク範囲を適切にする */
+        cursor: pointer;
+
     }
 }
 
@@ -47,6 +55,7 @@ header {
 .pc_nav ul li {
     color: #00416A;
     font-family: "futura-pt", sans-serif;
+    font-size: 20px;
 }
 
 /* スマホ版メニュー */
@@ -62,7 +71,7 @@ header {
 
     .sp_btn {
         display: block;
-        height: 24px;
+        height: 40px;
         cursor: pointer;
         position: absolute;
         top: 34px;
@@ -72,12 +81,12 @@ header {
 
     .sp_btn span {
         display: block;
-        width: 24px;
+        width: 40px;
         height: 1px;
         border-radius: 1px;
         background: #00416A;
         position: relative;
-        top: 8.5px;
+        top: 8px;
         transition: 0.3s;
     }
 
@@ -85,7 +94,7 @@ header {
     .sp_btn span::after {
         content: "";
         display: block;
-        width: 24px;
+        width: 40px;
         height: 1px;
         border-radius: 1px;
         background: #00416A;
@@ -94,11 +103,11 @@ header {
     }
 
     .sp_btn span::before {
-        bottom: 8.5px;
+        bottom: 12px;
     }
 
     .sp_btn span::after {
-        top: 8.5px
+        top: 12px
     }
 
     /* ばつ印 */
@@ -182,12 +191,10 @@ header {
     font-size: 80px;
     letter-spacing: 0.05em;
     color: #00416A;
-    /* デザインに合わせた色 */
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     /* 枠外から出てくるように見せる場合 */
-    /* opacity: 0; */
-    /* 名前の表示が終わった後に動き出すようにディレイを長めにする
-    animation: fadeInUp 1.0s ease-out 1.5s forwards; */
 }
 
 .animate-portfolio span {
@@ -196,7 +203,7 @@ header {
     /* 最初は透明 */
     transform: translateY(20px);
     /* 少し下に配置 */
-    animation: fadeInUp 0.5s forwards;
+    animation: fadeInUp 0.8s forwards;
     /* アニメーション実行 */
 }
 
@@ -420,12 +427,22 @@ header {
     color: #fff;
 }
 
-.btn-more:hover .arrow,
-.btn-more:hover .arrow::after {
+.btn-more:hover .arrow {
     background-color: #fff;
-    border-color: #fff;
 }
 
+/* 先端の「く」は、背景は塗らずに「線だけ」白くする */
+.btn-more:hover .arrow::after {
+    background-color: transparent;
+    /* ★中身は透明のまま！ */
+    border-color: #fff;
+    /* ★線だけ白く！ */
+}
+
+
+#about {
+    padding-bottom: 0;
+}
 
 .about-flex {
     display: flex;
@@ -452,7 +469,7 @@ header {
     text-align: left;
 }
 
-.profile-name h3 {
+.profile-name p {
     display: inline-block;
     font-size: 28px;
     margin-right: 32px;
@@ -466,6 +483,7 @@ header {
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     color: #35424D;
+    letter-spacing: 0.05em;
 }
 
 .profile-description {
@@ -484,11 +502,592 @@ header {
     margin-top: 32px;
 }
 
-.sns-links {}
+
+.X_logo {
+    margin-right: 24px;
+}
+
+.profile-footer .more {
+    position: relative;
+    padding-right: 48px;
+    color: #00416A;
+}
 
 
-.more-link {
+.profile-footer .arrow {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    color: #00416A;
+}
+
+.footer {
+    position: relative;
+    margin-top: 160px;
+}
+
+.CONTACT_containar {
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-more {
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 484px;
+    height: 80px;
+    border: 1px solid #00416A;
+    border-radius: 40px;
+    color: #00416A;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.CONTACT {
+    font-family: the-seasons, sans-serif;
+    font-size: 56px;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.contact_text {
     font-family: yu-gothic-pr6n, sans-serif;
     font-weight: 18px;
     color: #00416A;
+    letter-spacing: 0.05em;
+    line-height: 1.75;
+    margin-bottom: 64px;
+}
+
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: futura-pt, sans-serif;
+}
+
+h1 img {
+    width: 300px;
+    vertical-align: baseline;
+}
+
+.footer_nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.footer_nav ul li {
+    color: #00416A;
+    font-family: "futura-pt", sans-serif;
+    font-size: 20px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: #00416A;
+    font-family: "futura-pt", sans-serif;
+    text-align: right;
+    font-size: 20px;
+}
+
+.page_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    /* Figmaの円のサイズに合わせる */
+    text-decoration: none;
+    width: 90px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* 回転する文字部分 */
+.rotating-text {
+    position: relative;
+    /* 親(btn-pagetop)を基準にする */
+    width: 100%;
+    height: auto;
+    /* ★回転のアニメーションをつける */
+    animation: rotation 10s linear infinite;
+}
+
+/* 真ん中の矢印（動かさない） */
+.static-arrow {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    /* 文字の上に重ねる */
+    width: 8px;
+    /* 矢印のサイズに合わせて調整 */
+    z-index: 2;
+    /* 文字より上に表示 */
+}
+
+/* ★くるくる回るアニメーションの定義 */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+main {
+    padding-top: 260px;
+}
+
+.section_title_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.en_sub {
+    font-family: the-seasons, sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    line-height: 1;
+    text-align: center;
+}
+
+.ja_sub {
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.category ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    /* padding: 0;
+    gap: 0; */
+}
+
+.category li {
+    display: flex;
+    align-items: center;
+    margin: 80px 0 96px 0;
+}
+
+/* リンク文字のデザイン */
+.category li a {
+    text-decoration: none;
+    color: #00416A;
+    padding: 0 40px;
+    font-family: "futura-pt", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+/* ★縦線を入れる（最後以外のliに右線を引く） */
+.category li:not(:last-child)::after {
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: #00416A;
+    display: inline-block;
+}
+
+.about_sub {
+    padding: 80px 0;
+}
+
+.service_container {
+    display: flex;
+    justify-content: center;
+    /* 中央に寄せる */
+    gap: 80px;
+    /* 左右のアイテムの間の距離 */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service_container {
+    display: flex;
+}
+
+.service_item {
+    text-align: center;
+}
+
+/* 丸いアイコン部分 */
+.service_icon {
+    width: 140px;
+    height: 140px;
+    background-color: #C4D4DC;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+}
+
+.service_icon img {
+    width: 63px;
+}
+
+.service_name {
+    font-size: 24px;
+    color: #00416A;
+    font-family: "futura-pt", sans-serif;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.service_text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #35424D;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.service_tools {
+    font-size: 18px;
+    color: #35424D;
+    text-align: left;
+    font-family: "futura-pt", sans-serif;
+    margin-bottom: 80px;
+}
+
+.strenghts_sub {
+    background: #F1F9FB;
+    padding: 96px 0;
+    margin-bottom: 80px;
+}
+
+.strengths_container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.strength_item {
+    display: flex;
+    padding: 56px 0;
+    border-bottom: 1px solid #C4D4DC;
+}
+
+.strength_item:last-child {
+    border-bottom: none
+}
+
+.strength_label {
+    width: 30%;
+}
+
+.strength_label h3 {
+    font-size: 24px;
+    color: #00416A;
+    letter-spacing: 0.05em;
+}
+
+.strength_content {
+    width: 70%;
+}
+
+.strength_content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #35424D;
+}
+
+.bio_container {
+    max-width: 876px;
+    margin: 0 auto;
+    /* padding: 100px 20px; */
+}
+
+/* .bio_header {
+    text-align: center;
+    margin-bottom: 80px;
+} */
+
+.bio_list {
+    position: relative;
+    padding-left: 100px;
+    /* 左側にアイコンと線のスペースを作る */
+}
+
+/* ★縦線（疑似要素で作成） */
+.bio_list::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    /* アイコンの中心に来るように調整 */
+    top: -32px;
+    width: 1px;
+    height: 110%;
+    background-color: #00416A;
+}
+
+.bio_item {
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+/* ★雪の結晶アイコン部分 */
+.bio_marker {
+    position: absolute;
+    left: -100px;
+    width: 25px;
+    z-index: 2;
+    padding: 38px 0;
+    /* 線が少し切れるように調整 */
+}
+
+.bio_marker img {
+    width: 100%;
+}
+
+/* ★テキスト部分 */
+.bio_content {
+    padding-top: 5px;
+}
+
+.bio_date {
+    display: block;
+    font-size: 20px;
+    color: #00416A;
+    font-family: "futura-pt", sans-serif;
+    margin-bottom: 16px;
+}
+
+.bio_title {
+    font-size: 24px;
+    color: #00416A;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.bio_text {
+    padding-left: 24px;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: #35424D;
+}
+
+.works_detail_container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.works-title_sub {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #35424D;
+}
+
+.works-category {
+    font-size: 18px;
+    color: #35424D;
+    margin-bottom: 68px;
+}
+
+/* メインビジュアル */
+.works_mv {
+    margin-bottom: 160px;
+    text-align: center;
+}
+
+.works_mv img {
+    width: 100%;
+}
+
+.ja_contact {
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #00416A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* スペックテーブル */
+.spec_list {
+    border-bottom: 1px solid #C4D4DC;
+}
+
+.spec_item {
+    display: flex;
+    padding: 40px 0;
+    border-top: 1px solid #C4D4DC;
+    /* 上側の線 */
+}
+
+/* 左側：項目 */
+.spec_item dt {
+    width: 25%;
+    font-size: 18px;
+    color: #00416A;
+}
+
+/* 右側：内容 */
+.spec_item dd {
+    width: 75%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #35424D;
+}
+
+.sped_item:last-child {
+    margin-bottom: 160px;
+}
+
+.contact_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.contact_header {
+    text-align: center;
+}
+
+.contact_lead {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #35424D;
+    margin-bottom: 56px;
+}
+
+.form_item {
+    margin-bottom: 32px;
+}
+
+.form_item label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #35424D;
+}
+
+.form_item label span {
+    color: #E32020;
+    margin-left: 5px;
+}
+
+/* 入力欄の共通スタイル */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #C4D4DC;
+    background-color: #DFE7EF;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #90939B;
+}
+
+textarea {
+    height: 294px;
+    /* お問い合わせ内容の高さ */
+    resize: vertical;
+}
+
+/* 送信ボタン */
+.form_btn {
+    text-align: center;
+    margin-top: 96px;
+}
+
+.form_btn button {
+    width: 240px;
+    height: 64px;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #00416A;
+    border: 1px solid #00416A;
+    border-radius: 50px;
+    /* ★丸みのあるボタン */
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* ボタンホバー時 */
+.form_btn button:hover {
+    background-color: #00416A;
+    color: #fff;
+}
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* ★画面の真ん中に来るように高さを調整 */
+    text-align: center;
+}
+
+.thanks_title {
+    font-size: 96px;
+    color: #00416A;
+    font-family: the-seasons, sans-serif;
+    margin-bottom: 40px;
+}
+
+/* メッセージ部分 */
+.thanks_message {
+    font-size: 18px;
+    line-height: 2;
+    color: #35424D;
+    margin-bottom: 88px;
+}
+
+/* トップに戻るボタン */
+.thanks_btn a {
+    display: inline-block;
+    width: 292px;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #00416A;
+    border: 1px solid #00416A;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* ホバー時の演出 */
+.thanks_btn a:hover {
+    background-color: #00416A;
+    color: #fff;
 }

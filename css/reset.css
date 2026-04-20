@@ -20,11 +20,12 @@ li {
     line-height: 1;
     list-style: none;
     /*デフォルトの文字色、font-familyを予め当てておく*/
-    color: #FDFEFF;
+    color: #35424D;
     font-family:
         "yu-gothic-pr6n",
         "the-seasons", "futura-pt",
         sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
