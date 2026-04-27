@@ -76,25 +76,27 @@
                 <p class="contact_lead">ご相談・お見積りは無料です。<br>お気軽にお問い合わせください。</p>
             </div>
 
-            <form action="#" method="post" class="contact_form">
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXr9MxeAiKSvlg9bxWPqcWoA_XSCoW1riY71v_wOl_est5ZQ/formResponse"
+                method="post" class="contact_form" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="form_item">
                     <label for="name">お名前<span>*</span></label>
-                    <input type="text" id="name" name="name" placeholder="山田太郎" required>
+                    <input type="text" id="name" name="entry.1091381557" placeholder="山田太郎" required>
                 </div>
 
                 <div class="form_item">
                     <label for="company">会社名</label>
-                    <input type="text" id="company" name="company" placeholder="株式会社◯◯">
+                    <input type="text" id="company" name="entry.567399033" placeholder="株式会社◯◯">
                 </div>
 
                 <div class="form_item">
                     <label for="email">メールアドレス<span>*</span></label>
-                    <input type="email" id="email" name="email" placeholder="sample@example.com" required>
+                    <input type="email" id="email" name="entry.273339827" placeholder="sample@example.com" required>
                 </div>
 
                 <div class="form_item">
                     <label for="message">お問い合わせ内容<span>*</span></label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="entry.484674638" required></textarea>
                 </div>
 
                 <div class="form_btn">
@@ -139,6 +141,11 @@
                         <img src="./image/Union.svg" alt="矢印" class="static-arrow"></a>
                 </div>
         </footer>
+        <script type="text/javascript">
+            let submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+            onload="if(submitted){window.location='./thanks.html';}"></iframe>
 </body>
 
 </html>

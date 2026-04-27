@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
     <script>
         (function (d) {
             var config = {
@@ -22,8 +22,8 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
     <script>
         (function (d) {
             var config = {
@@ -36,9 +36,8 @@
     </script>
 
     <title>Yukina Design Portfolio</title>
-
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -74,70 +73,74 @@
 
         <nav class="category">
             <ul>
-                <li><a href="#">ALL</a></li>
-                <li><a href="#">WEB</a></li>
-                <li><a href="#">BANNER</a></li>
-                <li><a href="#">OTHER</a></li>
+                <li data-filter="ALL" class="is-active">ALL</li>
+                <li data-filter="WEB">WEB</li>
+                <li data-filter="BANNER">BANNER</li>
+                <li data-filter="OTHER">OTHER</li>
             </ul>
         </nav>
 
         <ul class="works-list">
-            <li class="works-item">
-                <div class="works-img"><img src="./image/pc_biyousitu.jpg" alt="美容室HP"></div>
+            <li data-category="WEB" class="is-show">
+                <div class="works-img"><a href="works_biyoushitsu.html"><img src="./image/pc_biyousitu.jpg"
+                            alt="美容室HP"></a></div>
                 <p class="works-title">美容室HP</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
-                <div class="works-img"><img src="./image/pc_portfolio.jpg" alt="ポートフォリオ"></div>
+            <li data-category="WEB" class="is-show">
+                <div class="works-img"><a href="works_portfolio.html"><img src="./image/pc_portfolio.jpg"
+                            alt="ポートフォリオ"></a></div>
                 <p class="works-title">ポートフォリオ</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
-                <div class="works-img"><img src="./image/pc_icecream.jpg" alt="アイスクリームバナー"></div>
+            <li data-category="BANNER" class="is-show">
+                <div class="works-img"><a href="works_icecream.html"><img src="./image/pc_icecream.jpg"
+                            alt="アイスクリームバナー"></a></div>
                 <p class="works-title">アイスクリーム　バナー</p>
                 <p class="works-category">バナー｜スクール課題</p>
             </li>
-            <li class="works-item">
+            <li data-category="WEB" class="is-show">
                 <div class="works-img"><img src="./image/pc_workaers.jpg" alt="WORKERS LP"></div>
                 <p class="works-title">WORKERS LP</p>
                 <p class="works-category">WEBサイト｜スクール課題</p>
             </li>
-            <li class="works-item">
+            <li data-category="WEB" class="is-show">
                 <div class="works-img"><img src="./image/pc_lpfv_seaberry.jpg" alt="サジーLPFV"></div>
                 <p class="works-title">サジーLPFV</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
+            <li data-category="WEB" class="is-show">
                 <div class="works-img"><img src="./image/pc_boost.jpg" alt="人材サービスHP"></div>
                 <p class="works-title">人材サービスHP</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
+            <li data-category="WEB" class="is-show">
                 <div class="works-img"><img src="./image/pc_lpfv_AI.jpg" alt="AI講座LP"></div>
                 <p class="works-title">AI講座LP FV</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
+            <li data-category="BANNER" class="is-show">
                 <div class="works-img"><img src="./image/pc_hamburger.jpg" alt="ハンバーガーバナーポップ"></div>
                 <p class="works-title">ハンバーガー　バナー</p>
                 <p class="works-category">バナー｜スクール課題</p>
             </li>
-            <li class="works-item">
+            <li data-category="BANNER" class="is-show">
                 <div class="works-img"><img src="./image/pc_hambueger_lux.jpg" alt="ハンバーガーバナー高級感"></div>
                 <p class="works-title">ハンバーガー　バナー</p>
                 <p class="works-category">バナー｜スクール課題</p>
             </li>
-            <li class="works-item">
+            <li data-category="WEB" class="is-show">
                 <div class="works-img"><img src="./image/pc_designcafe.jpg" alt="DESIGN CAFE"></div>
                 <p class="works-title">DESIGN CAFE コーディング</p>
                 <p class="works-category">WEBサイト｜スクール課題</p>
             </li>
-            <li class="works-item">
-                <div class="works-img"><img src="./image/pc_techglow.jpg" alt="pc_techglow"></div>
+            <li data-category="WEB" class="is-show">
+                <div class="works-img"><a href="works_techglow.html"><img src="./image/pc_techglow.jpg"
+                            alt="pc_techglow"></a></div>
                 <p class="works-title">Teck Glow LP</p>
                 <p class="works-category">WEBサイト｜自主制作</p>
             </li>
-            <li class="works-item">
+            <li data-category="BANNER" class="is-show">
                 <div class="works-img"><img src="./image/pc_springsale.jpg" alt="スプリングセールバナー"></div>
                 <p class="works-title">スプリングセール　バナー</p>
                 <p class="works-category">バナー｜スクール課題</p>
@@ -180,6 +183,51 @@
                     <img src="./image/Union.svg" alt="矢印" class="static-arrow"></a>
             </div>
     </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const categoryContents = document.querySelectorAll('[data-category]');
+
+        filterButtons.forEach((filterButton) => {
+            filterButton.addEventListener('click', buttonSwitch);
+            filterButton.addEventListener('click', categoryFilter);
+        });
+
+        function buttonSwitch() {
+            filterButtons.forEach((filterButton) => {
+                filterButton.classList.remove("is-active");
+                this.classList.add('is-active');
+            });
+        }
+
+        function categoryFilter() {
+            const buttonCategory = this.dataset.filter;
+            const targetContents = document.querySelectorAll('[data-category="' + buttonCategory + '"]');
+
+            categoryContents.forEach((categoryContent) => {
+
+                categoryContent.animate([{
+                    opacity: 0
+                },
+                {
+                    opacity: 1
+                }
+                ], {
+                    duration: 600,
+                    fill: 'forwards'
+                });
+
+                if (buttonCategory == 'ALL') {
+                    categoryContent.classList.add('is-show');
+                } else {
+                    categoryContent.classList.remove("is-show");
+                    targetContents.forEach((targetContent) => {
+                        targetContent.classList.add('is-show');
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

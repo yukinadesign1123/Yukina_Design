@@ -2,11 +2,12 @@
 
 body {
     background: #FDFEFF;
-    max-width: 1440px;
 }
 
 section {
     padding: 120px 0;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 header {
@@ -262,39 +263,39 @@ header {
     animation-delay: 1.1s;
 }
 
-.animate-portfolio span:nth-child(12) {
+.animate-portfolio span:nth-child(1) {
     animation-delay: 1.2s;
 }
 
-.animate-portfolio span:nth-child(13) {
+.animate-portfolio span:nth-child(2) {
     animation-delay: 1.3s;
 }
 
-.animate-portfolio span:nth-child(14) {
+.animate-portfolio span:nth-child(3) {
     animation-delay: 1.4s;
 }
 
-.animate-portfolio span:nth-child(15) {
+.animate-portfolio span:nth-child(4) {
     animation-delay: 1.5s;
 }
 
-.animate-portfolio span:nth-child(16) {
+.animate-portfolio span:nth-child(5) {
     animation-delay: 1.6s;
 }
 
-.animate-portfolio span:nth-child(17) {
+.animate-portfolio span:nth-child(6) {
     animation-delay: 1.7s;
 }
 
-.animate-portfolio span:nth-child(18) {
+.animate-portfolio span:nth-child(7) {
     animation-delay: 1.8s;
 }
 
-.animate-portfolio span:nth-child(19) {
+.animate-portfolio span:nth-child(8) {
     animation-delay: 1.9s;
 }
 
-.animate-portfolio span:nth-child(20) {
+.animate-portfolio span:nth-child(9) {
     animation-delay: 2.0s;
 }
 
@@ -379,12 +380,9 @@ header {
 
     /* サイズと形状 */
     width: 400px;
-    /* Figmaのサイズに合わせて調整 */
     height: 75px;
     border: 1px solid #00416A;
-    /* 枠線の色 */
-    border-radius: 38px;
-    /* 高さの半分を指定すると綺麗なカプセル型になります */
+    border-radius: 50%;
 
     /* テキストのスタイル */
     color: #00416A;
@@ -694,20 +692,25 @@ main {
 }
 
 .category li {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin: 80px 0 96px 0;
 }
 
+.filter li.is-active {
+    color: red;
+}
+
 /* リンク文字のデザイン */
-.category li a {
+/* .category li a {
     text-decoration: none;
     color: #00416A;
     padding: 0 40px;
     font-family: "futura-pt", sans-serif;
     font-size: 24px;
     letter-spacing: 0.05em;
-}
+} */
 
 /* ★縦線を入れる（最後以外のliに右線を引く） */
 .category li:not(:last-child)::after {
@@ -917,12 +920,13 @@ main {
 
 /* メインビジュアル */
 .works_mv {
-    margin-bottom: 160px;
+    margin-bottom: 80px;
     text-align: center;
 }
 
 .works_mv img {
     width: 100%;
+    border-radius: 4px;
 }
 
 .ja_contact {
@@ -934,16 +938,97 @@ main {
     margin-bottom: 40px;
 }
 
+.btn-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.btn-modal {
+    text-align: center;
+    margin: 80px 0 160px;
+
+}
+
+.btn-modal-more {
+    margin-bottom: 160px;
+}
+
+.btn-PC-SP {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* サイズと形状 */
+    width: 200px;
+    height: 56px;
+    border: 1px solid #00416A;
+    border-radius: 36px;
+
+    /* テキストのスタイル */
+    color: #00416A;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* ホバー時の演出 */
+.btn-PC-SP:hover {
+    background-color: #00416A;
+    color: #fff;
+}
+
+.btn-PC-SP:hover .arrow {
+    background-color: #fff;
+}
+
+.remodal {
+    position: relative;
+    padding: 25px;
+}
+
+.remodal img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.remodal-cancel {
+
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #00416A;
+    color: #00416A;
+    background: #fff;
+}
+
+.remodal-cancel:hover {
+    color: #fff;
+    background: #00416A;
+}
+
 /* スペックテーブル */
 .spec_list {
     border-bottom: 1px solid #C4D4DC;
+    margin-bottom: 160pxpx;
 }
 
 .spec_item {
     display: flex;
+    /* align-items: center; */
     padding: 40px 0;
     border-top: 1px solid #C4D4DC;
-    /* 上側の線 */
+}
+
+.spec_row .label {
+    display: inline-block;
+    /* 幅を指定できるようにする */
+    width: 6em;
+    /* ★ここ！この数字を調整して空欄の広さを決める */
 }
 
 /* 左側：項目 */
@@ -959,6 +1044,11 @@ main {
     font-size: 18px;
     line-height: 1.5;
     color: #35424D;
+}
+
+.btn-back {
+    margin-top: 160px;
+    text-align: center;
 }
 
 .sped_item:last-child {
@@ -1035,7 +1125,7 @@ textarea {
     background-color: #fff;
     color: #00416A;
     border: 1px solid #00416A;
-    border-radius: 50px;
+    border-radius: 50%;
     /* ★丸みのあるボタン */
     font-size: 24px;
     cursor: pointer;
@@ -1090,4 +1180,13 @@ textarea {
 .thanks_btn a:hover {
     background-color: #00416A;
     color: #fff;
+}
+
+
+/* 先端の「く」は、背景は塗らずに「線だけ」白くする */
+.btn-PC-SP .arrow::after {
+    background-color: transparent;
+    /* ★中身は透明のまま！ */
+    border-color: #fff;
+    /* ★線だけ白く！ */
 }
