@@ -59,6 +59,27 @@ header {
     font-size: 20px;
 }
 
+.header_wrap nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.header_wrap nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00416A;
+    transition: width 0.3s ease;
+}
+
+.header_wrap nav ul li a:hover::after {
+    width: 100%;
+}
+
 /* スマホ版メニュー */
 .sp_nav,
 .sp_btn {
@@ -133,7 +154,7 @@ header {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 65, 106, 0.9);
         z-index: 1;
     }
 
@@ -151,6 +172,13 @@ header {
         color: #fff;
         font-size: 32px;
         font-family: the-seasons, sans-serif;
+    }
+
+    .sns-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 80px;
     }
 }
 
@@ -299,6 +327,76 @@ header {
     animation-delay: 2.0s;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+.scroll_down {
+    position: absolute;
+    bottom: 127px;
+    left: 50%;
+}
+
+.scroll_down img {
+    position: absolute;
+    left: 10px;
+    bottom: 87px;
+    color: #00416A;
+    letter-spacing: .2em;
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.scroll_down:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    /* background: #00416A; */
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove {
+    0% {
+        bottom: 160px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.scroll_down:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 120px;
+    background: #00416A;
+}
 
 .section_title {
     display: flex;
@@ -334,6 +432,17 @@ header {
     letter-spacing: 0.05em;
     line-height: 200%;
     color: #00416A;
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 56px;
+    padding: 0 10px 0 10px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .works-list {
@@ -509,6 +618,7 @@ header {
     position: relative;
     padding-right: 48px;
     color: #00416A;
+    transition: opacity 0.3s ease;
 }
 
 
@@ -517,6 +627,15 @@ header {
     right: 0%;
     top: 50%;
     color: #00416A;
+    transition: transform 0.3s ease;
+}
+
+.profile-footer .more:hover {
+    opacity: 0.7;
+}
+
+.profile-footer .arrow:hover {
+    opacity: 0.7;
 }
 
 .footer {
@@ -696,29 +815,57 @@ main {
     display: flex;
     align-items: center;
     margin: 80px 0 96px 0;
-}
-
-.filter li.is-active {
-    color: red;
-}
-
-/* リンク文字のデザイン */
-/* .category li a {
+    color: #C4D4DC;
     text-decoration: none;
-    color: #00416A;
-    padding: 0 40px;
+    padding-left: 40px;
     font-family: "futura-pt", sans-serif;
     font-size: 24px;
     letter-spacing: 0.05em;
-} */
+}
+
+.category li.is-active {
+    color: #00416A;
+}
+
+.works-list li,
+.coming {
+    display: none;
+}
+
+.works-list li.is-show,
+.coming.is-show {
+    display: block;
+}
+
+.coming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: 240px;
+    border: 1px solid #C4D4DC;
+    border-radius: 4px;
+}
+
+.cs-text {
+    font-family: "Futura-pt", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: #00416A;
+    margin-top: 20px;
+}
 
 /* ★縦線を入れる（最後以外のliに右線を引く） */
 .category li:not(:last-child)::after {
     content: "";
+    display: inline-block;
     width: 1px;
     height: 24px;
-    background-color: #00416A;
-    display: inline-block;
+    background-color: #C4D4DC;
+    border-right: 1px solid #C4D4DC;
+    margin-left: 40px;
+
 }
 
 .about_sub {
@@ -938,13 +1085,6 @@ main {
     margin-bottom: 40px;
 }
 
-.btn-content {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-
-}
-
 .btn-modal {
     text-align: center;
     margin: 80px 0 160px;
@@ -952,6 +1092,9 @@ main {
 }
 
 .btn-modal-more {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     margin-bottom: 160px;
 }
 
@@ -988,7 +1131,7 @@ main {
 
 .remodal {
     position: relative;
-    padding: 25px;
+    padding: 24px;
 }
 
 .remodal img {
@@ -998,12 +1141,24 @@ main {
 }
 
 .remodal-cancel {
-
-    width: 100%;
-    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    position: absolute;
+    /* 親要素の .remodal を基準にする */
+    top: 10px;
+    /* 上からの距離（お好みで調整） */
+    right: 10px;
+    /* 右からの距離（お好みで調整） */
     border: 1px solid #00416A;
     color: #00416A;
     background: #fff;
+    position: sticky;
+    top: 0;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .remodal-cancel:hover {
@@ -1019,16 +1174,25 @@ main {
 
 .spec_item {
     display: flex;
-    /* align-items: center; */
     padding: 40px 0;
     border-top: 1px solid #C4D4DC;
 }
 
-.spec_row .label {
-    display: inline-block;
-    /* 幅を指定できるようにする */
-    width: 6em;
-    /* ★ここ！この数字を調整して空欄の広さを決める */
+.spec_row {
+    display: flex;
+    gap: 88px;
+    margin-bottom: 24px;
+}
+
+.label {
+    width: 172px;
+    font-size: 18px;
+    color: #35424D;
+    font-family: yu-gothic-pr6n, sans-serif;
+}
+
+.spec_row:last-child {
+    margin-bottom: 0;
 }
 
 /* 左側：項目 */
@@ -1044,6 +1208,7 @@ main {
     font-size: 18px;
     line-height: 1.5;
     color: #35424D;
+    margin-top: -0.25em;
 }
 
 .btn-back {
