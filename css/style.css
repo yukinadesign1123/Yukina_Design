@@ -14,19 +14,31 @@ header {
     position: relative;
 }
 
-.header_background {
+.inview {
+    opacity: 0;
+    transition: 2s;
+}
+
+.inview.is-show {
+    opacity: 1;
+}
+
+
+header>div {
     position: relative;
 }
 
 .header_background img {
     width: 100%;
+    height: 956px;
+    object-fit: cover;
 }
 
 .header_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 5% 0;
+    padding: 16px 5%;
     position: absolute;
     top: 0;
     left: 0;
@@ -40,12 +52,16 @@ header {
 
     h1 img {
         width: 250px;
-        vertical-align: baseline;
+        vertical-align: middle;
         display: inline-block;
-        /* リンク範囲を適切にする */
         cursor: pointer;
 
     }
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pc_nav ul {
@@ -350,11 +366,12 @@ header {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -4px;
-    width: 11px;
-    height: 11px;
+    left: -7px;
+    width: 15px;
+    height: 17px;
     border-radius: 50%;
     /* background: #00416A; */
+    background-image: url("../image/kessyou.svg");
     animation:
         circlemove 1.6s ease-in-out infinite,
         cirlemovehide 1.6s ease-out infinite;
@@ -362,7 +379,7 @@ header {
 
 @keyframes circlemove {
     0% {
-        bottom: 160px;
+        bottom: 120px;
     }
 
     100% {
@@ -434,25 +451,15 @@ header {
     color: #00416A;
 }
 
-.works {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
-    row-gap: 56px;
-    padding: 0 10px 0 10px;
-    max-width: 1080px;
-    width: 100%;
-    margin: 0 auto;
-}
-
+.works,
 .works-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 56px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     max-width: 1080px;
-    width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -554,13 +561,10 @@ header {
 .about-flex {
     display: flex;
     align-items: center;
-    /* 上下の中央に揃える */
     gap: 100px;
-    /* 画像とテキストの間の距離 */
     max-width: 1080px;
-    /* コンテンツ全体の幅 */
     margin: 0 auto;
-    /* 真ん中寄せ */
+    padding-right: 10px;
 }
 
 .about-image img {
@@ -595,13 +599,11 @@ header {
 
 .profile-description {
     margin-top: 32px;
-    line-height: 1.8;
-    /* 行間を広げて読みやすく */
+    line-height: 1.75;
     font-size: 18px;
     color: #35424D;
 }
 
-/* SNSと「詳しく見る」を横に並べる */
 .profile-footer {
     display: flex;
     justify-content: space-between;
@@ -609,9 +611,15 @@ header {
     margin-top: 32px;
 }
 
-
 .X_logo {
     margin-right: 24px;
+}
+
+.sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .profile-footer .more {
@@ -641,6 +649,11 @@ header {
 .footer {
     position: relative;
     margin-top: 160px;
+    min-height: 765px;
+}
+
+.footer>img {
+    width: 100%;
 }
 
 .CONTACT_containar {
@@ -650,6 +663,7 @@ header {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .btn-more {
@@ -679,7 +693,7 @@ header {
 
 .contact_text {
     font-family: yu-gothic-pr6n, sans-serif;
-    font-weight: 18px;
+    font-size: 18px;
     color: #00416A;
     letter-spacing: 0.05em;
     line-height: 1.75;
@@ -835,9 +849,18 @@ main {
 .works-list li.is-show,
 .coming.is-show {
     display: block;
+
 }
 
 .coming {
+    padding: 0 10px 0 10px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coming div {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1053,16 +1076,17 @@ main {
     margin: 0 auto;
 }
 
+.category {
+    font-size: 18px;
+    color: #90939B;
+    margin: 24px 0 80px 0;
+
+}
+
 .works-title_sub {
     font-size: 40px;
     margin-bottom: 40px;
     color: #35424D;
-}
-
-.works-category {
-    font-size: 18px;
-    color: #35424D;
-    margin-bottom: 68px;
 }
 
 /* メインビジュアル */
@@ -1148,7 +1172,7 @@ main {
     /* 親要素の .remodal を基準にする */
     top: 10px;
     /* 上からの距離（お好みで調整） */
-    right: 10px;
+    left: 100%;
     /* 右からの距離（お好みで調整） */
     border: 1px solid #00416A;
     color: #00416A;
@@ -1159,6 +1183,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 50px;
 }
 
 .remodal-cancel:hover {
@@ -1169,7 +1194,9 @@ main {
 /* スペックテーブル */
 .spec_list {
     border-bottom: 1px solid #C4D4DC;
-    margin-bottom: 160pxpx;
+    width: 74%;
+    margin-bottom: 160px;
+    margin: 0 auto;
 }
 
 .spec_item {
@@ -1354,4 +1381,197 @@ textarea {
     /* ★中身は透明のまま！ */
     border-color: #fff;
     /* ★線だけ白く！ */
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    main {
+        padding: 200px 80px 0 80px;
+    }
+
+    .sp_btn {
+        top: 27px;
+    }
+
+    .works,
+    .works-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 48px;
+        padding: 0 10px;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .works_detail_container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .spec_list {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        width: 200px;
+    }
+
+    .animate-text {
+        font-size: 80px;
+    }
+
+    .animate-portfolio {
+        font-size: 48px;
+    }
+
+    main {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    .en {
+        font-size: 32px;
+    }
+
+    .ja {
+        font-size: 14px;
+    }
+
+    section {
+        max-width: 330px;
+    }
+
+    .CONCEPT_text {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .profile-name p {
+        font-size: 20px;
+    }
+
+    .name-en,
+    .profile-description {
+        font-size: 16px;
+    }
+
+    .sns .X_logo,
+    .sns .insta_logo {
+        width: 24px;
+    }
+
+    .btn-more {
+        width: 330px;
+        height: 75px;
+        font-size: 16px;
+    }
+
+    .arrow {
+        width: 30px;
+    }
+
+    .footer_wrap {
+        flex-direction: column;
+        margin-top: 112px;
+    }
+
+    footer h1 {
+        width: 240px;
+        margin-bottom: 32px;
+    }
+
+    .footer_nav ul {
+        gap: 24px;
+        margin-bottom: 80px;
+    }
+
+    .copyright {
+        /* right: 50%; */
+        font-size: 14px;
+        left: 50%;
+        /* まず左端を画面の50%の位置に持ってくる */
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    .works {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .works-list {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+
+    .works-title {
+        font-size: 18px;
+    }
+
+    .works-item {
+        font-size: 14px;
+    }
+
+    .works-category {
+        font-size: 16px;
+    }
+
+    .category li {
+        padding-left: 16px;
+        margin: 0;
+    }
+
+    .category li:not(:last-child)::after {
+        margin-left: 16px;
+    }
+
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .CONTACT {
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+
+    .en_sub {
+        font-size: 32;
+    }
+
+    .ja_sub {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .animate-text {
+        font-size: 48px;
+    }
+
+    .animate-portfolio {
+        font-size: 24px;
+    }
+
+    .header_background img {
+        height: 600px;
+    }
+
+    .scroll_down:after {
+        height: 80px;
+    }
+
+    @keyframes circlemove {
+        0% {
+            bottom: 80px;
+        }
+    }
+
+
+
+
 }
