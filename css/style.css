@@ -370,11 +370,10 @@ header>div {
     width: 15px;
     height: 17px;
     border-radius: 50%;
-    /* background: #00416A; */
     background-image: url("../image/kessyou.svg");
     animation:
-        circlemove 1.6s ease-in-out infinite,
-        cirlemovehide 1.6s ease-out infinite;
+        circlemove 2.0s ease-in-out infinite,
+        cirlemovehide 2.0s ease-out infinite;
 }
 
 @keyframes circlemove {
@@ -701,6 +700,16 @@ header>div {
     margin-bottom: 64px;
 }
 
+.sp {
+    display: none;
+}
+
+@media not all and (min-width: 767px) {
+    .sp {
+        display: block;
+    }
+}
+
 .footer_wrap {
     display: flex;
     justify-content: space-between;
@@ -959,6 +968,7 @@ main {
     background: #F1F9FB;
     padding: 96px 0;
     margin-bottom: 80px;
+
 }
 
 .strengths_container {
@@ -1426,15 +1436,15 @@ textarea {
     }
 
     .animate-text {
-        font-size: 80px;
-    }
-
-    .animate-portfolio {
         font-size: 48px;
     }
 
+    .animate-portfolio {
+        font-size: 24px;
+    }
+
     main {
-        padding: 0 30px;
+        padding: 120px 30px;
     }
 
     .en {
@@ -1477,6 +1487,10 @@ textarea {
     .arrow {
         width: 30px;
         right: 30px;
+    }
+
+    .contact_text {
+        font-size: 16px;
     }
 
     .footer_wrap {
@@ -1549,12 +1563,113 @@ textarea {
     }
 
     .en_sub {
-        font-size: 32;
+        font-size: 32px;
     }
 
     .ja_sub {
         font-size: 14px;
         margin-bottom: 40px;
+    }
+
+    .service_container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .service_text,
+    .service_name {
+        margin-bottom: 24px;
+    }
+
+    .service_tools {
+        margin-bottom: 56px;
+    }
+
+    .strength_item {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+    }
+
+    .strength_content p {
+        font-size: 16px;
+    }
+
+    .strength_content {
+        width: 100%;
+    }
+
+    .strength_label h3 {
+        font-size: 20px;
+        text-align: left;
+        /* 文字を左寄せにする */
+        display: block;
+        /* 幅いっぱいのブロックとして扱う */
+        margin: 0;
+        /* 余計な外側の余白を消す */
+        padding: 0;
+    }
+
+    .strength_label {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .bio_content {
+        padding-top: 56px;
+        width: 100%;
+        margin-left: 16px;
+    }
+
+    .bio_list {
+        padding-left: 0;
+        /* PC用の100pxを強制解除 */
+        width: 100%;
+        position: relative;
+    }
+
+    .bio_item {
+        padding-left: 30px;
+        margin-bottom: 0;
+    }
+
+    .bio_marker {
+        position: absolute;
+        left: 3px;
+        top: 40px;
+        width: 19px;
+        height: auto;
+    }
+
+    .bio_date {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .bio_title {
+        margin-bottom: 24px;
+        font-size: 20px;
+    }
+
+    .bio_text {
+        padding: 0 10px 0 0;
+        font-size: 16px;
+        width: 100%;
+
+    }
+
+    .bio_list::before {
+        top: 36px;
+        height: 100%;
+    }
+
+    .about_sub {
+        padding-bottom: 0;
+    }
+
+    .rotating-text {
+        width: 80px;
     }
 }
 
