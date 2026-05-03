@@ -28,23 +28,9 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'iew1lhr',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
 
-    <title>Yukina Design Portfolio</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -80,16 +66,24 @@
     <main>
         <div class="works_detail_container">
             <p class="works-title_sub inview">美容室HP</p>
-            <p class="category inview"># WEBサイト &nbsp; # 自主制作</p>
+            <p class="category_more inview"># WEBサイト &nbsp; # 自主制作</p>
             <div class="works_mv inview">
-                <img src="./image/more_biyousitu.jpg" alt="美容室HP 制作実績">
+                <picture>
+                    <source srcset="./image/more_biyousitu2x.jpg" media="(max-width: 767px)">
+                    <img src="./image/more_biyousitu.jpg" alt="美容室">
+                </picture>
             </div>
 
             <div class="btn-modal inview">
                 <a href="#modal_01" class="btn-PC-SP">PC版</a>
                 <div class="remodal" data-remodal-id="modal_01">
                     <button data-remodal-action="cancel" class="remodal-cancel">×</button>
-                    <div><img src="./image/pc__biyousitsu.jpg" alt="美容室HP 制作実績"></div>
+                    <div>
+                        <picture>
+                            <source srcset="./image/biyousitu_2x.jpg" media="(max-width: 767px)">
+                            <img src="./image/pc__biyousitsu.jpg" alt="美容室HP 制作実績">
+                        </picture>
+                    </div>
                 </div>
 
 
@@ -151,7 +145,8 @@
                 <h2 class="section_title inview">
                     <span class="CONTACT">CONTACT</span>
                 </h2>
-                <p class="contact_text inview">制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。<br>
+                <p class="contact_text">制作のご相談やご質問など、下記フォームより<br class="sp">
+                    お気軽にお問い合わせください。<br>
                     内容を確認後、折り返しご連絡いたします。</p>
                 <div class="btn-container inview">
                     <a href="contact.html" class="btn-more">

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -28,23 +28,9 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'iew1lhr',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
 
-    <title>Yukina Design Portfolio</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -80,78 +66,90 @@
     <main>
         <div class="works_detail_container">
             <p class="works-title_sub inview">ポートフォリオ</p>
-            <p class="category inview"># WEBサイト &nbsp; # 自主制作</p>
+            <p class="category_more inview"># WEBサイト &nbsp; # 自主制作</p>
             <div class="works_mv inview">
-                <img src="./image/more_portfolio.jpg" alt="ポートフォリオ 制作実績">
+                <picture>
+                    <source srcset="./image/more_portfolio2x.jpg" media="(max-width: 767px)">
+                    <img src="./image/more_portfolio.jpg" alt="ポートフォリオ">
+                </picture>
             </div>
             <div class="btn-content inview">
                 <div class="btn-modal-more">
                     <a href="#modal_01" class="btn-PC-SP">PC版</a>
                     <div class="remodal" data-remodal-id="modal_01">
                         <button data-remodal-action="cancel" class="remodal-cancel">×</button>
-                        <div><img src="./image/pc__portfolio.jpg" alt="ポートフォリオ 制作実績"></div>
+                        <div>
+                            <picture>
+                                <source srcset="./image/TOP_2x.jpg" media="(max-width: 767px)">
+                                <img src="./image/TOP.jpg" alt="ポートフォリオ">
+                            </picture>
+                        </div>
                     </div>
                     <a href="#modal_02" class="btn-PC-SP">SP版</a>
                     <div class="remodal" data-remodal-id="modal_02">
                         <button data-remodal-action="cancel" class="remodal-cancel">×</button>
-                        <div><img src="./image/portfolio_4x.jpg" alt="ポートフォリオ 制作実績"></div>
+                        <div>
+                            <picture>
+                                <source srcset="./image/TOP_SP_2x.jpg" media="(max-width: 767px)">
+                                <img src="./image/TOP_SP.jpg" alt="ポートフォリオ">
+                            </picture>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="works_spec">
-                <dl class="spec_list">
-                    <div class="spec_item inview">
-                        <dt>ターゲット</dt>
-                        <dd>採用担当者の方々<br>
-                            Web制作の外注を検討している方</dd>
-                    </div>
-                    <div class="spec_item inview">
-                        <dt>課題</dt>
-                        <dd>自分の作品をまとめたサイトがない</dd>
-                    </div>
-                    <div class="spec_item inview">
-                        <dt>目的</dt>
-                        <dd>採用担当の方に制作物や自分の強みなどを伝え、興味を持ってもらう</dd>
-                    </div>
-                    <div class="spec_item inview">
-                        <dt>サイト構成</dt>
-                        <dd>サイトを見ている人がわかりやすく、見やすいというのを意識し、シンプルな設計にしました。制作物から興味を持っていただいた後の動線としてAbout（自己紹介）へスムーズに誘導。単なるスキルの羅列ではなく、書類だけでは伝わりにくい「責任感」や「正確性」といった人柄をストーリーとして補完し、一緒に働くイメージを具体的に持っていただけるよう意識しました。
-                        </dd>
-                    </div>
-                    <div class="spec_item inview">
-                        <dt>デザイン</dt>
-                        <dd>自身の名前に由来する、雪や冬の澄んだ世界観をベースにデザインしました。12年間の製造現場で培ってきた「丁寧さ・誠実さ」を青系で表現しつつ、冷たい印象にならないよう、心がけました。
-                        </dd>
-                    </div>
-                    <div class="spec_item" inview>
-                        <dt>制作期間</dt>
-                        <dd>
-                            <div class="spec_row inview">
-                                <span class="label">企画／情報設計／WF</span>2週間
-                            </div>
-                            <div class="spec_row inview">
-                                <span class="label">デザイン</span>4週間
-                            </div>
-                            <div class="spec_row inview">
-                                <span class="label">コーディング</span>4週間
-                            </div>
-                        </dd>
-                    </div>
-                    <div class="spec_item inview">
-                        <dt>使用ツール</dt>
-                        <dd>Figma／Photoshop／Illustrator／ VScode</dd>
-                    </div>
-                </dl>
-            </div>
+                <div class="works_spec">
+                    <dl class="spec_list">
+                        <div class="spec_item inview">
+                            <dt>ターゲット</dt>
+                            <dd>採用担当者の方々<br>
+                                Web制作の外注を検討している方</dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>課題</dt>
+                            <dd>自分の作品をまとめたサイトがない</dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>目的</dt>
+                            <dd>採用担当の方に制作物や自分の強みなどを伝え、興味を持ってもらう</dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>サイト構成</dt>
+                            <dd>サイトを見ている人がわかりやすく、見やすいというのを意識し、シンプルな設計にしました。制作物から興味を持っていただいた後の動線としてAbout（自己紹介）へスムーズに誘導。単なるスキルの羅列ではなく、書類だけでは伝わりにくい「責任感」や「正確性」といった人柄をストーリーとして補完し、一緒に働くイメージを具体的に持っていただけるよう意識しました。
+                            </dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>デザイン</dt>
+                            <dd>自身の名前に由来する、雪や冬の澄んだ世界観をベースにデザインしました。12年間の製造現場で培ってきた「丁寧さ・誠実さ」を青系で表現しつつ、冷たい印象にならないよう、心がけました。
+                            </dd>
+                        </div>
+                        <div class="spec_item" inview>
+                            <dt>制作期間</dt>
+                            <dd>
+                                <div class="spec_row inview">
+                                    <span class="label">企画／情報設計／WF</span>2週間
+                                </div>
+                                <div class="spec_row inview">
+                                    <span class="label">デザイン</span>4週間
+                                </div>
+                                <div class="spec_row inview">
+                                    <span class="label">コーディング</span>4週間
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>使用ツール</dt>
+                            <dd>Figma／Photoshop／Illustrator／ VScode</dd>
+                        </div>
+                    </dl>
+                </div>
 
-            <div class="btn-back inview">
-                <a href="works.html" class="btn-more">
-                    一覧へ戻る
-                    <span class="arrow"></span>
-                </a>
+                <div class="btn-back inview">
+                    <a href="works.html" class="btn-more">
+                        一覧へ戻る
+                        <span class="arrow"></span>
+                    </a>
+                </div>
             </div>
-        </div>
     </main>
 
     <footer>
@@ -161,7 +159,8 @@
                 <h2 class="section_title inview">
                     <span class="CONTACT">CONTACT</span>
                 </h2>
-                <p class="contact_text inview">制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。<br>
+                <p class="contact_text">制作のご相談やご質問など、下記フォームより<br class="sp">
+                    お気軽にお問い合わせください。<br>
                     内容を確認後、折り返しご連絡いたします。</p>
                 <div class="btn-container inview">
                     <a href="contact.html" class="btn-more">

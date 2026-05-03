@@ -471,13 +471,15 @@ header>div {
 
 .works-title {
     margin-top: 24px;
-    font-family: "Yu Gothic";
+    font-family: yu-gothic-pr6n, sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #35424D;
 }
 
 .works-category {
+    font-family: yu-gothic-pr6n, sans-serif;
+    ;
     font-size: 18px;
     color: #90939B;
     margin-top: 12px;
@@ -652,8 +654,15 @@ header>div {
     min-height: 765px;
 }
 
-.footer>img {
+/* .footer>img {
     width: 100%;
+} */
+
+footer picture img {
+    width: 100%;
+    height: 765px;
+    border-radius: 16%;
+    object-fit: cover;
 }
 
 .CONTACT_containar {
@@ -967,7 +976,8 @@ main {
 .strenghts_sub {
     background: #F1F9FB;
     padding: 96px 0;
-    margin-bottom: 80px;
+    width: 100cqw;
+    margin: 0 calc(50% - 50cqw) 80px;
 
 }
 
@@ -1097,6 +1107,12 @@ main {
 
 }
 
+.category_more {
+    font-size: 18px;
+    margin-bottom: 68px;
+    color: #35424D;
+}
+
 .works-title_sub {
     font-size: 40px;
     margin-bottom: 40px;
@@ -1176,6 +1192,7 @@ main {
     width: 100%;
     height: auto;
     vertical-align: top;
+    border: 1px solid #C4D4DC;
 }
 
 .remodal-cancel {
@@ -1300,12 +1317,14 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 16px;
+    padding: 10px;
     border: 1px solid #C4D4DC;
     background-color: #DFE7EF;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+    font-family: yu-gothic-pr6n, sans-serif;
+    ;
 }
 
 input::placeholder,
@@ -1315,7 +1334,6 @@ textarea::placeholder {
 
 textarea {
     height: 294px;
-    /* お問い合わせ内容の高さ */
     resize: vertical;
 }
 
@@ -1326,17 +1344,18 @@ textarea {
 }
 
 .form_btn button {
-    width: 240px;
-    height: 64px;
-    padding: 10px 0;
     background-color: #fff;
-    color: #00416A;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 484px;
+    height: 80px;
     border: 1px solid #00416A;
-    border-radius: 50%;
-    /* ★丸みのあるボタン */
-    font-size: 24px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 40px;
+    color: #00416A;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
 }
 
 /* ボタンホバー時 */
@@ -1359,14 +1378,15 @@ textarea {
     color: #00416A;
     font-family: the-seasons, sans-serif;
     margin-bottom: 40px;
+    text-align: center;
 }
 
-/* メッセージ部分 */
-.thanks_message {
+.thanks_message p {
     font-size: 18px;
     line-height: 2;
     color: #35424D;
     margin-bottom: 88px;
+    text-align: center;
 }
 
 /* トップに戻るボタン */
@@ -1413,7 +1433,7 @@ textarea {
     .works-list {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 40px;
-        row-gap: 48px;
+        row-gap: 64px;
         padding: 0 10px;
         max-width: 720px;
         margin: 0 auto;
@@ -1432,7 +1452,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
     h1 {
-        width: 200px;
+        width: 134px;
     }
 
     .animate-text {
@@ -1444,7 +1464,7 @@ textarea {
     }
 
     main {
-        padding: 120px 30px;
+        padding: 120px 30px 0 30px;
     }
 
     .en {
@@ -1456,7 +1476,7 @@ textarea {
     }
 
     section {
-        padding: 120px 30px;
+        padding: 120px 30px 0 30px;
     }
 
     .CONCEPT_text {
@@ -1478,7 +1498,8 @@ textarea {
         width: 24px;
     }
 
-    .btn-more {
+    .btn-more,
+    .form_btn button {
         width: 330px;
         height: 75px;
         font-size: 16px;
@@ -1491,11 +1512,17 @@ textarea {
 
     .contact_text {
         font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .footer {
+        margin-top: 100px;
+        min-height: 688px;
     }
 
     .footer_wrap {
         flex-direction: column;
-        margin-top: 112px;
+        bottom: 8%;
     }
 
     footer h1 {
@@ -1503,18 +1530,24 @@ textarea {
         margin-bottom: 32px;
     }
 
+    .footer .btn-container {
+        margin-top: 48px;
+    }
+
     .footer_nav ul {
         gap: 24px;
-        margin-bottom: 80px;
+        margin-bottom: 130px;
     }
 
     .copyright {
-        /* right: 50%; */
         font-size: 14px;
         left: 50%;
-        /* まず左端を画面の50%の位置に持ってくる */
         transform: translate(-50%, -50%);
-        white-space: nowrap;
+        text-align: center;
+    }
+
+    .work .btn-container {
+        margin-bottom: 80px;
     }
 
     .works {
@@ -1538,15 +1571,18 @@ textarea {
         font-size: 16px;
     }
 
+    .category {
+        margin: 0;
+    }
+
     .category ul {
         gap: 10px 20px
     }
 
     .category li {
-        padding-left: 16px;
-        margin: 0;
-        width: 100%;
-        white-space: nowrap;
+        font-size: 19px;
+        padding-left: 0;
+        margin: 0 0 88px 0;
     }
 
     .category li:not(:last-child)::after {
@@ -1555,6 +1591,11 @@ textarea {
 
     .about-flex {
         flex-direction: column;
+        gap: 40px;
+    }
+
+    .profile-description {
+        margin-top: 24px;
     }
 
     .CONTACT {
@@ -1603,11 +1644,8 @@ textarea {
     .strength_label h3 {
         font-size: 20px;
         text-align: left;
-        /* 文字を左寄せにする */
         display: block;
-        /* 幅いっぱいのブロックとして扱う */
         margin: 0;
-        /* 余計な外側の余白を消す */
         padding: 0;
     }
 
@@ -1671,6 +1709,85 @@ textarea {
     .rotating-text {
         width: 80px;
     }
+
+    .contact_lead,
+    .form_item label,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    footer picture img {
+        border-radius: 100px;
+        height: 688px;
+    }
+
+    .thanks_title {
+        font-size: 60px;
+        margin-top: 48px;
+    }
+
+    .thanks_message p {
+        margin-bottom: 80px;
+    }
+
+    .works-title_sub {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .category_more {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .works_mv {
+        margin: 0;
+    }
+
+    .btn-modal {
+        margin: 40px 0 80px 0;
+    }
+
+    .btn-PC-SP {
+        font-size: 18px;
+    }
+
+    .spec_item {
+        flex-direction: column;
+    }
+
+    .spec_item dt {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .spec_item dd {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .label {
+        font-size: 16px;
+        width: 153px;
+    }
+
+    .spec_row {
+        margin-bottom: 8px;
+    }
+
+    .btn-back {
+        margin-top: 80px;
+    }
+
+    .btn-modal-more {
+        margin: 40px 0 80px 0;
+    }
 }
 
 
@@ -1698,7 +1815,7 @@ textarea {
     }
 
     main {
-        padding: 120px 16px;
+        padding: 120px 16px 0 16px;
     }
 
 

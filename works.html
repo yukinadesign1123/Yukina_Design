@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
     <script>
         (function (d) {
             var config = {
@@ -20,25 +19,10 @@
 
     <title>Yukina Design Portfolio</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css"> -->
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'iew1lhr',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-
-    <title>Yukina Design Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -166,7 +150,8 @@
                 <h2 class="section_title inview">
                     <span class="CONTACT">CONTACT</span>
                 </h2>
-                <p class="contact_text inview">制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。<br>
+                <p class="contact_text">制作のご相談やご質問など、下記フォームより<br class="sp">
+                    お気軽にお問い合わせください。<br>
                     内容を確認後、折り返しご連絡いたします。</p>
                 <div class="btn-container inview">
                     <a href="contact.html" class="btn-more">
@@ -194,8 +179,22 @@
                     <img src="./image/Union.svg" alt="矢印" class="static-arrow"></a>
             </div>
     </footer>
-
+    <script src="./jquery.inview.min.js"></script>
     <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $(".inview").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
+            });
+        })
+
+
+
         const filterButtons = document.querySelectorAll('[data-filter]');
         const categoryContents = document.querySelectorAll('[data-category]');
         const coming = document.querySelector('.coming');

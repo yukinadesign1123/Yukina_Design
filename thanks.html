@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
     <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
     <script>
@@ -20,26 +19,10 @@
 
     <title>Yukina Design Portfolio</title>
 
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/iew1lhr.css">
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'iew1lhr',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-
-    <title>Yukina Design Portfolio</title>
-
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -67,21 +50,89 @@
     </div>
 
     <main>
-        <div class="thanks_container">
+        <div class="thanks_container inview">
             <h2 class="thanks_title">THANK YOU</h2>
 
-            <div class="thanks_message">
-                <p>お問い合わせありがとうございます。</p>
-                <p>ご入力いただいたメールアドレス宛に3日以内にご返信いたします。</p>
+            <div class="thanks_message inview">
+                <p>お問い合わせありがとうございます。<br>
+                    ご入力いただいたメールアドレス宛に<br class="sp">
+                    3日以内にご返信いたします。</p>
             </div>
 
-            <div class="thanks_btn">
-                <a href="index.html">トップページに戻る</a>
+            <div class="btn-container inview">
+                <a href="index.html" class="btn-more">
+                    トップページに戻る
+                </a>
             </div>
+
         </div>
         </section>
     </main>
 
+    <footer>
+        <div class="footer inview">
+            <picture>
+                <source srcset="./image/footer_bg2x.jpg" media="(max-width: 767px)">
+                <img src="./image/footer.jpg" alt="背景">
+            </picture>
+            <!-- <img src="./image/footer.jpg" alt="背景"> -->
+            <div class="CONTACT_containar">
+                <h2 class="section_title inview">
+                    <span class="CONTACT">CONTACT</span>
+                </h2>
+                <p class="contact_text">制作のご相談やご質問など、下記フォームより<br class="sp">
+                    お気軽にお問い合わせください。<br>
+                    内容を確認後、折り返しご連絡いたします。</p>
+                <div class="btn-container inview">
+                    <a href="contact.html" class="btn-more">
+                        制作について問い合わせる
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_wrap inview">
+                <h1>
+                    <img src="./image/yukina_design_logo_header_2x.png" alt="Yukina Design">
+                </h1>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">©︎2026 Yukina Kubo</p>
+            <div class="page_top">
+                <a href="#header">
+                    <img src="./image/pagetotop.svg" alt="to PAGE TOP" class="rotating-text">
+                    <img src="./image/Union.svg" alt="矢印" class="static-arrow"></a>
+            </div>
+    </footer>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
+
+    <script src="./jquery.inview.min.js"></script>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $(".inview").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
+            });
+        })
+
+
+
+
+    </script>
 </body>
 
 </html>
