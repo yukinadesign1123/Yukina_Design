@@ -602,6 +602,7 @@ header>div {
     line-height: 1.75;
     font-size: 18px;
     color: #35424D;
+    text-align: justify;
 }
 
 .profile-footer {
@@ -619,7 +620,7 @@ header>div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
 .profile-footer .more {
@@ -943,6 +944,7 @@ main {
     color: #35424D;
     text-align: left;
     margin-bottom: 32px;
+    text-align: justify;
 }
 
 .service_tools {
@@ -992,6 +994,7 @@ main {
     font-size: 18px;
     line-height: 1.5;
     color: #35424D;
+    text-align: justify;
 }
 
 .bio_container {
@@ -1069,6 +1072,7 @@ main {
     line-height: 1.5;
     letter-spacing: 0.05em;
     color: #35424D;
+    text-align: justify;
 }
 
 .works_detail_container {
@@ -1236,6 +1240,7 @@ main {
     line-height: 1.5;
     color: #35424D;
     margin-top: -0.25em;
+    text-align: justify;
 }
 
 .btn-back {
@@ -1429,8 +1434,7 @@ textarea {
     }
 
     main {
-        max-width: 330px;
-        margin: 0 auto;
+        padding: 0 30px;
     }
 
     .en {
@@ -1442,7 +1446,7 @@ textarea {
     }
 
     section {
-        max-width: 330px;
+        padding: 120px 30px;
     }
 
     .CONCEPT_text {
@@ -1472,6 +1476,7 @@ textarea {
 
     .arrow {
         width: 30px;
+        right: 30px;
     }
 
     .footer_wrap {
@@ -1504,7 +1509,7 @@ textarea {
 
     .works-list {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 auto;
+        justify-items: center;
     }
 
     .works-title {
@@ -1519,9 +1524,15 @@ textarea {
         font-size: 16px;
     }
 
+    .category ul {
+        gap: 10px 20px
+    }
+
     .category li {
         padding-left: 16px;
         margin: 0;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .category li:not(:last-child)::after {
@@ -1571,7 +1582,9 @@ textarea {
         }
     }
 
-
+    main {
+        padding: 120px 16px;
+    }
 
 
 }
