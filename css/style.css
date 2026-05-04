@@ -43,14 +43,13 @@ header>div {
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 100%; */
+    width: 100%;
     box-sizing: border-box;
     font-family: futura-pt, sans-serif;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    max-width: none;
 
     h1 img {
         width: 250px;
@@ -667,6 +666,10 @@ footer>picture>img {
     height: 765px;
     border-radius: 16%;
     object-fit: cover;
+}
+
+.footer picture img {
+    width: 100%;
 }
 
 .CONTACT_containar {
