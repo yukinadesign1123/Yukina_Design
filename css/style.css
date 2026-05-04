@@ -26,6 +26,7 @@ header {
 
 header>div {
     position: relative;
+    overflow-x: hidden;
 }
 
 .header_background img {
@@ -986,6 +987,7 @@ main {
 .strengths_container {
     max-width: 1080px;
     margin: 0 auto;
+    padding: 0 30px
 }
 
 .strength_item {
@@ -1523,6 +1525,7 @@ textarea {
         overflow: hidden;
     }
 
+
     .footer_wrap {
         flex-direction: column;
         bottom: 0%;
@@ -1708,7 +1711,7 @@ textarea {
     }
 
     .about_sub {
-        padding-bottom: 0;
+        padding: 0 10px;
     }
 
     .rotating-text {
