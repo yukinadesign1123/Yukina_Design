@@ -62,3 +62,130 @@
             </ul>
         </nav>
     </div>
+
+    <main>
+        <div class="works_detail_container">
+            <p class="works-title_sub inview">WORKS LP</p>
+            <p class="category_more inview"># WEBサイト &nbsp; # スクール課題</p>
+            <div class="works_mv inview">
+                <picture>
+                    <source srcset="./image/more_workers2x.jpg" media="(max-width: 767px)">
+                    <img src="./image/more_works.jpg" alt="WORKS LP">
+                </picture>
+            </div>
+            <div class="btn-content inview">
+                <div class="btn-modal-more">
+                    <a href="#modal_01" class="btn-PC-SP">PC版</a>
+                    <div class="remodal" data-remodal-id="modal_01">
+                        <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+                        <div>
+                            <picture>
+                                <source srcset="./image/workers2x.jpg" media="(max-width: 767px)">
+                                <img src="./image/workers.jpg" alt="WORKS LP">
+                            </picture>
+                        </div>
+                    </div>
+                    <a href="#modal_02" class="btn-PC-SP">SP版</a>
+                    <div class="remodal" data-remodal-id="modal_02">
+                        <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+                        <div>
+                            <picture>
+                                <source srcset="./image/workers_sp2x.jpg" media="(max-width: 767px)">
+                                <img src="./image/workers_sp.jpg" alt="WORKS LP">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="works_spec">
+                    <dl class="spec_list">
+                        <div class="spec_item inview">
+                            <dt>担当範囲</dt>
+                            <dd>デザイン模写</dd>
+                        </div>
+                        <div class="spec_item inview">
+                            <dt>使用ツール</dt>
+                            <dd>Figma
+                            </dd>
+                        </div>
+                        <div class="spec_item" inview>
+                            <dt>制作期間</dt>
+                            <dd>
+                                <div class="spec_row inview">
+                                    <span class="label">デザイン</span>5日
+                                </div>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="btn-back inview">
+                    <a href="works.html" class="btn-more">
+                        一覧へ戻る
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer inview">
+            <picture>
+                <source srcset="./image/footer_bg2x.jpg" media="(max-width: 767px)">
+                <img src="./image/footer.jpg" alt="背景">
+            </picture>
+            <div class="CONTACT_containar">
+                <h2 class="section_title inview">
+                    <span class="CONTACT">CONTACT</span>
+                </h2>
+                <p class="contact_text">制作のご相談やご質問など、下記フォームより<br class="sp">
+                    お気軽にお問い合わせください。<br>
+                    内容を確認後、折り返しご連絡いたします。</p>
+                <div class="btn-container inview">
+                    <a href="contact.html" class="btn-more">
+                        制作について問い合わせる
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_wrap inview">
+                <h1>
+                    <a href="index.html"></a> <img src="./image/yukina_design_logo_header_2x.png"
+                        alt="Yukina Design"></a>
+                </h1>
+                <nav class="footer_nav">
+                    <ul>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">©︎2026 Yukina Kubo</p>
+            <div class="page_top">
+                <a href="#header">
+                    <img src="./image/pagetotop.svg" alt="to PAGE TOP" class="rotating-text">
+                    <img src="./image/Union.svg" alt="矢印" class="static-arrow"></a>
+            </div>
+    </footer>
+    <script src="./jquery.inview.min.js"></script>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $(".inview").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
+            });
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

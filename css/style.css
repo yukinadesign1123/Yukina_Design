@@ -156,11 +156,13 @@ header>div {
     .sp_btn.open span::before {
         bottom: 0;
         transform: rotate(45deg);
+        background: #fff;
     }
 
     .sp_btn.open span::after {
         top: 0;
         transform: rotate(-45deg);
+        background: #fff;
     }
 
     /* メニューの見た目 */
@@ -750,7 +752,7 @@ h1 img {
 
 .copyright {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     right: 5%;
     color: #00416A;
     font-family: "futura-pt", sans-serif;
@@ -847,7 +849,7 @@ main {
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin: 80px 0 96px 0;
+    margin-bottom: 96px;
     color: #C4D4DC;
     text-decoration: none;
     padding-left: 40px;
@@ -1189,7 +1191,7 @@ main {
 }
 
 .remodal img {
-    width: 100%;
+    width: auto;
     height: auto;
     vertical-align: top;
     border: 1px solid #C4D4DC;
@@ -1517,16 +1519,17 @@ textarea {
 
     .footer {
         margin-top: 100px;
-        min-height: 688px;
+        height: 688px;
+        overflow: hidden;
     }
 
     .footer_wrap {
         flex-direction: column;
-        bottom: 8%;
+        bottom: 0%;
     }
 
     footer h1 {
-        width: 240px;
+        width: 214px;
         margin-bottom: 32px;
     }
 
@@ -1620,10 +1623,12 @@ textarea {
     .service_text,
     .service_name {
         margin-bottom: 24px;
+        font-size: 16px;
     }
 
     .service_tools {
         margin-bottom: 56px;
+        font-size: 16px;
     }
 
     .strength_item {
