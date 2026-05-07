@@ -530,28 +530,6 @@ header>div {
     margin-top: 80px;
 }
 
-.btn-more {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    /* サイズと形状 */
-    width: 400px;
-    height: 75px;
-    border: 1px solid #00416A;
-    border-radius: 50%;
-
-    /* テキストのスタイル */
-    color: #00416A;
-    text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 0.05em;
-
-    position: relative;
-    transition: all 0.3s;
-    /* ホバー時の動きを滑らかにする */
-}
-
 /* 矢印（CSSで描く） */
 .arrow {
     position: absolute;
@@ -734,6 +712,8 @@ footer>picture>img {
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 0.05em;
+    position: relative;
+    transition: all 0.3s;
 }
 
 .CONTACT {
@@ -1389,6 +1369,9 @@ textarea {
 .form_btn {
     text-align: center;
     margin-top: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .form_btn button {
@@ -1404,6 +1387,9 @@ textarea {
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 0.05em;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
 /* ボタンホバー時 */
@@ -1578,14 +1564,13 @@ textarea {
         /* height: 100%; */
         overflow: hidden;
         border-radius: 100px 100px 0 0;
+        position: relative;
+        overflow: hidden;
     }
 
     .footer picture img {
         /* 1. 【最重要】「文字」としての性質を消して、ただの箱（ブロック）にする */
         display: block;
-        /* vertical-align: bottom; */
-        /* 念のため、下端に合わせる指定も追加 */
-
         /* 2. 親の幅と高さに合わせる */
         width: 100%;
         height: 100%;
@@ -1596,13 +1581,6 @@ textarea {
         /* 4. 画像の下にできる謎の隙間を物理的にカットする */
         font-size: 0;
         line-height: 0;
-    }
-
-    /* 親要素（footer）の設定も確認してください */
-    .footer {
-        position: relative;
-        overflow: hidden;
-        /* 子要素（画像）のはみ出しをカット */
     }
 
     .footer picture {
@@ -1887,6 +1865,10 @@ textarea {
     .btn-modal-more {
         margin: 40px 0 80px 0;
     }
+
+    .contact_container {
+        padding: 80px 0;
+    }
 }
 
 
@@ -1915,6 +1897,10 @@ textarea {
 
     main {
         padding: 120px 16px 0 16px;
+    }
+
+    section {
+        padding: 100px 10px 0 10px;
     }
 
 
